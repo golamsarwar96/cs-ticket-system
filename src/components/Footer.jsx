@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-        <div className="w-[250px]">
+        <div className="w-62.5">
           <h1 className="text-xl font-bold">CS — Ticket System</h1>
           <p>
             CS — Ticket System is a query based website where different types of
