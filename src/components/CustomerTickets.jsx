@@ -5,12 +5,14 @@ import React from "react";
 const CustomerTickets = () => {
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold text-mist-700">Customer Tickets</h1>
-      <div className="grid gap-4 grid-cols-3">
+      <h1 className="text-2xl font-bold text-mist-700 text-center lg:text-left mb-3">
+        Customer Tickets
+      </h1>
+      <div className="grid gap-4 lg:grid-cols-3 grid-cols-1">
         {/* tickets section */}
-        <div className="flex gap-9 col-span-2">
+        <div className="lg:flex gap-9 lg:col-span-2">
           {/* Single ticket */}
-          <div class="card w-96 bg-base-100 card-sm shadow-lg">
+          <div class="card lg:w-96 bg-base-100 card-sm shadow-lg">
             <div class="card-body">
               <div className="flex justify-between gap-1">
                 <h2 class="card-title flex-1">Small Card</h2>
@@ -35,7 +37,7 @@ const CustomerTickets = () => {
               </div>
             </div>
           </div>
-          <div class="card w-96 bg-base-100 card-sm shadow-lg">
+          <div class="card lg:w-96 bg-base-100 card-sm shadow-lg">
             <div class="card-body">
               <div className="flex justify-between gap-1">
                 <h2 class="card-title flex-1">Small Card</h2>
@@ -61,7 +63,7 @@ const CustomerTickets = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 space-y-4">
+        <div className="lg:col-span-1 space-y-4 p-2">
           {/* Task Section */}
           <div className="text-mist-700">
             <h1 className="text-2xl font-bold">Task Status</h1>

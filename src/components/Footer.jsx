@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="flex flex-col">
       <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
         <div className="w-62.5">
           <h1 className="text-xl font-bold">CS — Ticket System</h1>
@@ -58,6 +58,11 @@ const Footer = () => {
             support@cst.com
           </a>
         </nav>
+      </footer>
+      <footer className="bg-black text-white footer sm:footer-horizontal footer-center p-6 ">
+        <aside>
+          <p>© 2025 CS — Ticket System. All rights reserved.</p>
+        </aside>
       </footer>
     </div>
   );

@@ -3,11 +3,15 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="p-2">
       <div className="navbar justify-between bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden p-0"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -36,7 +40,9 @@ const NavBar = () => {
               <li>Contact</li>
             </ul>
           </div>
-          <a className="lg:text-xl text-[15px] font-bold">CS - Ticket System</a>
+          <a className="lg:text-xl text-[14px] font-bold ml-2">
+            CS - Ticket System
+          </a>
         </div>
         <div className="hidden lg:flex">
           <ul className="flex gap-6 font-normal">
