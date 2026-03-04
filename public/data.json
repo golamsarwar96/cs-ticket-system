@@ -1,0 +1,110 @@
+[
+  {
+    "id": "#1001",
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still cannot gain access.",
+    "customer": "John Smith",
+    "priority": "HIGH",
+    "status": "Open",
+    "createdAt": "2024-01-15"
+  },
+  {
+    "id": "#1002",
+    "title": "Payment Not Processing",
+    "description": "Customer's credit card is being declined at checkout despite having sufficient funds. The error message says 'transaction failed'.",
+    "customer": "Sarah Johnson",
+    "priority": "HIGH",
+    "status": "Open",
+    "createdAt": "2024-01-16"
+  },
+  {
+    "id": "#1003",
+    "title": "Profile Picture Upload Failing",
+    "description": "Customer is unable to upload a new profile picture. The upload bar reaches 100% but the image never saves.",
+    "customer": "Michael Lee",
+    "priority": "LOW",
+    "status": "In Progress",
+    "createdAt": "2024-01-17"
+  },
+  {
+    "id": "#1004",
+    "title": "Email Notifications Not Received",
+    "description": "Customer reports they are not receiving any email notifications for order updates. Checked spam folder with no results.",
+    "customer": "Emily Carter",
+    "priority": "MEDIUM",
+    "status": "Open",
+    "createdAt": "2024-01-18"
+  },
+  {
+    "id": "#1005",
+    "title": "App Crashes on Launch",
+    "description": "The mobile app crashes immediately after the splash screen on an iPhone 14. Issue started after the latest update.",
+    "customer": "David Brown",
+    "priority": "HIGH",
+    "status": "In Progress",
+    "createdAt": "2024-01-19"
+  },
+  {
+    "id": "#1006",
+    "title": "Wrong Item Delivered",
+    "description": "Customer received a completely different product than what was ordered. Order #84523 shows correct item but delivery was incorrect.",
+    "customer": "Olivia Martinez",
+    "priority": "HIGH",
+    "status": "Open",
+    "createdAt": "2024-01-20"
+  },
+  {
+    "id": "#1007",
+    "title": "Subscription Plan Not Upgrading",
+    "description": "Customer paid for the Pro plan upgrade but their account still reflects the Free tier. Charge has already been deducted.",
+    "customer": "James Wilson",
+    "priority": "MEDIUM",
+    "status": "Resolved",
+    "createdAt": "2024-01-21"
+  },
+  {
+    "id": "#1008",
+    "title": "Two-Factor Locked Out",
+    "description": "Customer lost access to their authenticator app and is now locked out of their account. Backup codes are not working.",
+    "customer": "Sophia Anderson",
+    "priority": "HIGH",
+    "status": "Open",
+    "createdAt": "2024-01-22"
+  },
+  {
+    "id": "#1009",
+    "title": "Dashboard Data Not Loading",
+    "description": "The analytics dashboard shows a blank screen with a spinner indefinitely. Issue is reproducible across Chrome and Firefox.",
+    "customer": "Liam Thomas",
+    "priority": "MEDIUM",
+    "status": "In Progress",
+    "createdAt": "2024-01-23"
+  },
+  {
+    "id": "#1010",
+    "title": "Refund Not Received After 10 Days",
+    "description": "Customer was approved for a refund on January 10th but the amount has not been credited back to their account.",
+    "customer": "Ava Jackson",
+    "priority": "MEDIUM",
+    "status": "Open",
+    "createdAt": "2024-01-24"
+  },
+  {
+    "id": "#1011",
+    "title": "Search Returning Irrelevant Results",
+    "description": "The product search feature is returning completely unrelated items. Searching for 'laptop' returns clothing and accessories.",
+    "customer": "Noah White",
+    "priority": "LOW",
+    "status": "Resolved",
+    "createdAt": "2024-01-25"
+  },
+  {
+    "id": "#1012",
+    "title": "Account Suspended Without Notice",
+    "description": "Customer's account was suspended without any prior warning or email explanation. They have not violated any terms of service.",
+    "customer": "Isabella Harris",
+    "priority": "HIGH",
+    "status": "Open",
+    "createdAt": "2024-01-26"
+  }
+]
