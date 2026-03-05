@@ -55,7 +55,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="">
-          <button className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] font-normal text-white px-4 py-2 rounded-sm flex items-center gap-1">
+          <button className="cursor-pointer bg-gradient-to-r from-[#632EE3] to-[#9F62F2] font-normal text-white px-4 py-2 rounded-sm flex items-center gap-1">
             <FontAwesomeIcon icon={faPlus} />
             New Ticket
           </button>

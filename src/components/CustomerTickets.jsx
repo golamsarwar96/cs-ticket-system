@@ -92,7 +92,7 @@ const CustomerTickets = ({
           <h1 className="text-2xl font-bold text-mist-700">Resolved Tasks</h1>
           {resolveTasks.map((resolve) => (
             <div className="text-mist-700">
-              <h1 className="text-2xl font-bold">{resolve.title}</h1>
+              <h1 className="text-lg font-medium">{resolve.title}</h1>
             </div>
           ))}
         </div>
