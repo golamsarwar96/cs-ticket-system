@@ -2,7 +2,7 @@
 
 Answer: JSX is short form of JavaScript XML. It lets us write HTML-like markup directly inside JavaScript code. JSX is mainly used on React. Unlike HTML, JSX is stricker. Means, we have to close all the tags.
 
-All the JSX markup is wrapped inside one shared parent. a <div>...</div> or an empty <>....</>
+All the JSX markup is wrapped inside one shared parent. a (<div>...</div>) or an empty (<>....</>)
 
 
 ## What is the difference between State and Props?
