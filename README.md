@@ -1,11 +1,11 @@
-## What is JSX, and why is it used?
+## 1. What is JSX, and why is it used?
 
 Answer: JSX is short form of JavaScript XML. It lets us write HTML-like markup directly inside JavaScript code. JSX is mainly used on React. Unlike HTML, JSX is stricker. Means, we have to close all the tags.
 
 All the JSX markup is wrapped inside one shared parent. a div or an empty (<>....</>)
 
 
-## What is the difference between State and Props?
+## 2. What is the difference between State and Props?
 
 Answer:
 useState: useState is a react hook that allows components to store, manage, and track data that changes over time. 
@@ -22,7 +22,7 @@ ii. pass data into a component.
 iii. re-renders the component.
 iv. props are used to pass current value of useState.
 
-## What is the useState hook, and how does it work? 
+## 3. What is the useState hook, and how does it work? 
 
 Answer: 
 useState is a react hook that allows components to store, manage, and track data that changes over time. It returns a current value and a setter function. It triggers re-render when the setter function is called. 
@@ -33,7 +33,7 @@ here,
 count = current value
 setCount = setter function
 
-## How can you share state between components?
+## 4. How can you share state between components?
 
 Answer: 
 States can be shared in multiple ways in react according to the project scenerio. 
@@ -46,7 +46,7 @@ States can be shared in multiple ways in react according to the project scenerio
 
 4. Creating custom hooks.
 
-## How is event handling done in React?
+## 5. How is event handling done in React?
 
 Answer: 
 Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences,
