@@ -13,10 +13,12 @@ const fetchTicketData = async () => {
 function App() {
   const [count, setCount] = useState(0);
   const [resolveCount, setResolveCount] = useState(0);
+  const [resolveTasks, setResolveTasks] = useState([]);
   const [addTask, setAddTask] = useState([]);
   const ticketPromise = fetchTicketData();
 
   console.log(addTask);
+  console.log(resolveTasks);
   return (
     <div className="max-w-300 mx-auto">
       {" "}
@@ -28,6 +30,8 @@ function App() {
         }
       >
         <CustomerTickets
+          resolveTasks={resolveTasks}
+          setResolveTasks={setResolveTasks}
           resolveCount={resolveCount}
           setResolveCount={setResolveCount}
           addTask={addTask}

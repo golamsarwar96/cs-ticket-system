@@ -11,10 +11,10 @@ const CustomerTickets = ({
   addTask,
   resolveCount,
   setResolveCount,
+  resolveTasks,
+  setResolveTasks,
 }) => {
   const ticketData = use(ticketPromise);
-
-  const notify = () => toast("Task Resolved");
 
   const handleAddTask = (addTicket) => {
     setAddTask([...addTask, addTicket]);
@@ -23,7 +23,9 @@ const CustomerTickets = ({
     console.log(count);
   };
 
-  const handleCompleteTask = () => {
+  const handleCompleteTask = (completeTasks) => {
+    setResolveTasks([...resolveTasks, completeTasks]);
+    console.log(resolveTasks);
     toast.success("Task Resolved");
     setResolveCount(resolveCount + 1);
     setCount(count - 1);
@@ -80,17 +82,19 @@ const CustomerTickets = ({
             <div className="text-mist-700 flex flex-col">
               <h1 className="text-lg font-medium">{add.title}</h1>
               <button
-                onClick={handleCompleteTask}
+                onClick={() => handleCompleteTask(add)}
                 className="btn bg-[#02A53B] text-white"
               >
                 Complete
               </button>
             </div>
           ))}
-          <div className="text-mist-700">
-            <h1 className="text-2xl font-bold">Resolved Task</h1>
-            <p>No resolved tasks yet.</p>
-          </div>
+          <h1 className="text-2xl font-bold text-mist-700">Resolved Tasks</h1>
+          {resolveTasks.map((resolve) => (
+            <div className="text-mist-700">
+              <h1 className="text-2xl font-bold">{resolve.title}</h1>
+            </div>
+          ))}
         </div>
       </div>
     </div>
