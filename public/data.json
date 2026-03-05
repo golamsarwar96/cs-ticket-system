@@ -23,7 +23,7 @@
     "description": "Customer is unable to upload a new profile picture. The upload bar reaches 100% but the image never saves.",
     "customer": "Michael Lee",
     "priority": "LOW",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "2024-01-17"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Customer paid for the Pro plan upgrade but their account still reflects the Free tier. Charge has already been deducted.",
     "customer": "James Wilson",
     "priority": "MEDIUM",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "2024-01-21"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Customer lost access to their authenticator app and is now locked out of their account. Backup codes are not working.",
     "customer": "Sophia Anderson",
     "priority": "HIGH",
-    "status": "Open",
+    "status": "In Progress",
     "createdAt": "2024-01-22"
   },
   {
@@ -95,7 +95,7 @@
     "description": "The product search feature is returning completely unrelated items. Searching for 'laptop' returns clothing and accessories.",
     "customer": "Noah White",
     "priority": "LOW",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "2024-01-25"
   },
   {

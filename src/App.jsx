@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner";
 import CustomerTickets from "./components/CustomerTickets";
@@ -11,18 +11,28 @@ const fetchTicketData = async () => {
 };
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [addTask, setAddTask] = useState([]);
   const ticketPromise = fetchTicketData();
+
+  console.log(addTask);
   return (
     <div className="max-w-300 mx-auto">
       {" "}
       <NavBar></NavBar>
-      <Banner></Banner>
+      <Banner count={count}></Banner>
       <Suspense
         fallback={
           <span className="loading loading-spinner text-primary"></span>
         }
       >
-        <CustomerTickets ticketPromise={ticketPromise}></CustomerTickets>
+        <CustomerTickets
+          addTask={addTask}
+          setAddTask={setAddTask}
+          ticketPromise={ticketPromise}
+          setCount={setCount}
+          count={count}
+        ></CustomerTickets>
       </Suspense>
       <Footer></Footer>
     </div>

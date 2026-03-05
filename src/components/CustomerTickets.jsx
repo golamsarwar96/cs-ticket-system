@@ -1,12 +1,27 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { use } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
-const CustomerTickets = ({ ticketPromise }) => {
+const CustomerTickets = ({
+  ticketPromise,
+  setCount,
+  count,
+  setAddTask,
+  addTask,
+}) => {
   const ticketData = use(ticketPromise);
-  console.log(ticketData);
+
+  const notify = () => toast("Task Resolved");
+
+  const handleAddTask = (addTicket) => {
+    setAddTask([...addTask, addTicket]);
+    setCount(count + 1);
+    toast.success("Task Added Successfully");
+    console.log(count);
+  };
   return (
-    <div className="p-4">
+    <div className="p-4 cursor-pointer">
       <h1 className="text-2xl font-bold text-mist-700 text-center lg:text-left mb-3">
         Customer Tickets
       </h1>
@@ -15,13 +30,19 @@ const CustomerTickets = ({ ticketPromise }) => {
         <div className="grid lg:grid-cols-2 gap-5 lg:col-span-2">
           {/* Single ticket */}
           {ticketData.map((ticket) => (
-            <div className="card lg:w-96 bg-base-100 card-sm shadow-lg">
+            <div
+              onClick={() => handleAddTask(ticket)}
+              key={ticket.id}
+              className="card lg:w-96 bg-base-100 card-sm shadow-lg"
+            >
               <div className="card-body">
                 <div className="flex justify-between gap-1">
                   <h2 className="card-title flex-1">{ticket.title}</h2>
-                  <span className="bg-[#B9F8CF] font-bold px-3 py-1 rounded-2xl text-[#0B5E06]">
+                  <span
+                    className={`${ticket.status === "Open" ? "bg-[#B9F8CF]" : "bg-[#F8F3B9]"} ${ticket.status === "Open" ? "text-[#0B5E06]" : "text-[#9C7700]"}font-bold px-3 py-1 rounded-2xl `}
+                  >
                     <FontAwesomeIcon
-                      className="text-[#02A53B]"
+                      className={`${ticket.status === "Open" ? "text-[#02A53B]" : "text-[#FEBB0C]"}`}
                       icon={faCircle}
                     />{" "}
                     {ticket.status}
@@ -46,10 +67,15 @@ const CustomerTickets = ({ ticketPromise }) => {
         </div>
         <div className="lg:col-span-1 space-y-4 p-2">
           {/* Task Section */}
-          <div className="text-mist-700">
-            <h1 className="text-2xl font-bold">Task Status</h1>
-            <p className="text-sm">Select a ticket to add to Task Status</p>
-          </div>
+          <h1 className="text-2xl font-bold text-mist-700">Task Status</h1>
+          {addTask.map((add) => (
+            <div className="text-mist-700 flex flex-col">
+              <h1 className="text-lg font-medium">{add.title}</h1>
+              <button onClick={notify} className="btn bg-[#02A53B] text-white">
+                Complete
+              </button>
+            </div>
+          ))}
           <div className="text-mist-700">
             <h1 className="text-2xl font-bold">Resolved Task</h1>
             <p>No resolved tasks yet.</p>
