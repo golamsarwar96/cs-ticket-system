@@ -12,6 +12,7 @@ const fetchTicketData = async () => {
 
 function App() {
   const [count, setCount] = useState(0);
+  const [resolveCount, setResolveCount] = useState(0);
   const [addTask, setAddTask] = useState([]);
   const ticketPromise = fetchTicketData();
 
@@ -20,13 +21,15 @@ function App() {
     <div className="max-w-300 mx-auto">
       {" "}
       <NavBar></NavBar>
-      <Banner count={count}></Banner>
+      <Banner count={count} resolveCount={resolveCount}></Banner>
       <Suspense
         fallback={
           <span className="loading loading-spinner text-primary"></span>
         }
       >
         <CustomerTickets
+          resolveCount={resolveCount}
+          setResolveCount={setResolveCount}
           addTask={addTask}
           setAddTask={setAddTask}
           ticketPromise={ticketPromise}

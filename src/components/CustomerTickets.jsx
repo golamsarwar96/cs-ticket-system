@@ -1,7 +1,7 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { use } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const CustomerTickets = ({
   ticketPromise,
@@ -9,6 +9,8 @@ const CustomerTickets = ({
   count,
   setAddTask,
   addTask,
+  resolveCount,
+  setResolveCount,
 }) => {
   const ticketData = use(ticketPromise);
 
@@ -19,6 +21,12 @@ const CustomerTickets = ({
     setCount(count + 1);
     toast.success("Task Added Successfully");
     console.log(count);
+  };
+
+  const handleCompleteTask = () => {
+    toast.success("Task Resolved");
+    setResolveCount(resolveCount + 1);
+    setCount(count - 1);
   };
   return (
     <div className="p-4 cursor-pointer">
@@ -71,7 +79,10 @@ const CustomerTickets = ({
           {addTask.map((add) => (
             <div className="text-mist-700 flex flex-col">
               <h1 className="text-lg font-medium">{add.title}</h1>
-              <button onClick={notify} className="btn bg-[#02A53B] text-white">
+              <button
+                onClick={handleCompleteTask}
+                className="btn bg-[#02A53B] text-white"
+              >
                 Complete
               </button>
             </div>

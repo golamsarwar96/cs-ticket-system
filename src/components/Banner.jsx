@@ -1,6 +1,6 @@
 import React from "react";
 import vector1 from "../assets/vector1.png";
-const Banner = ({ count }) => {
+const Banner = ({ count, resolveCount }) => {
   return (
     <div>
       <div className="p-4 flex justify-center items-center flex-col md:flex-row gap-4">
@@ -26,7 +26,7 @@ const Banner = ({ count }) => {
           </div>
           <div className="text-center lg:mt-12 mt-4 text-white">
             <p className="lg:text-2xl text-medium font-normal w-30">Resolved</p>
-            <h1 className="lg:text-6xl text-4xl font-medium">0</h1>
+            <h1 className="lg:text-6xl text-4xl font-medium">{resolveCount}</h1>
           </div>
           <div>
             <img src={vector1} className="scale-x-[-1]" alt="" />
